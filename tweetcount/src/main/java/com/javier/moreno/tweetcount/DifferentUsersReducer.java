@@ -16,18 +16,5 @@ import org.apache.hadoop.mapreduce.Reducer;
  *
  * @author ciberado
  */
-public class DifferentUsersReducer extends Reducer<Text, LongWritable,  Text, IntWritable> implements Serializable {
-    private static final long serialVersionUID = 1L;
-    private IntWritable userCounts = new IntWritable();
-
-    public void reduce(Text key, Iterable<LongWritable> values, Context context) 
-    throws IOException, InterruptedException {
-        long count = 0;
-        for (LongWritable val : values) {
-           count = count + val.get();
-        }
-        userCounts.set((int) count);
-        context.write(key, userCounts);
-    }
-    
+public class DifferentUsersReducer {    
 }

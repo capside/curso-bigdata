@@ -15,19 +15,5 @@ import org.apache.hadoop.mapreduce.Reducer;
  *
  * @author ciberado
  */
-public class CountReducer extends Reducer<Text, LongWritable,  Text, LongWritable> implements Serializable {
-    private static final long serialVersionUID = 1L;
-    private final LongWritable counter = new LongWritable();
-
-    @Override
-    public void reduce(Text key, Iterable<LongWritable> values, Context context) 
-    throws IOException, InterruptedException {
-        long count = 0;
-        for (LongWritable val : values) {
-           count = count + 1;
-        }
-        counter.set(count);
-        context.write(key, counter);
-    }
-    
+public class CountReducer {
 }
