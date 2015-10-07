@@ -4,7 +4,7 @@
     <groupId>com.javiermoreno.cloud</groupId>
     <artifactId>storm-cluster</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
+    <name>50 - Storm basic example</name>
 
     <dependencies>
         <dependency>
