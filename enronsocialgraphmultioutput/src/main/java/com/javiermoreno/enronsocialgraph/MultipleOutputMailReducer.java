@@ -3,6 +3,7 @@ package com.javiermoreno.enronsocialgraph;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.hadoop.io.LongWritable;
@@ -38,7 +39,7 @@ public class MultipleOutputMailReducer extends Reducer<MailRelationship, LongWri
         for (LongWritable val : timestampsIt) {
             timestampValues.add(val);
         }
-        timestampValues.sort(new LongWritable.Comparator());
+        Collections.sort(timestampValues, new LongWritable.Comparator());
         LongWritable[] timestampsArray = timestampValues.toArray(new LongWritable[0]);
         timestamps.set(timestampsArray);
         
