@@ -36,7 +36,7 @@ public class EnronSocialGraphApplication {
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
 
-        String inPath = args.length > 0 ? args[0] : "file:///C:\\tmp\\dump\\enron_mail/messages.json";
+        String inPath = args.length > 0 ? args[0] : "file:///C:\\Datos\\Dropbox\\cursos\\bigdata\\prisa\\messages_inbox.json";
         FileInputFormat.addInputPath(job, new Path(inPath));
         String outPath = args.length > 0 ? args[1] : "file:///C:/tmp/enron_results/results{0}/";
         FileOutputFormat.setOutputPath(job, new Path(MessageFormat.format(outPath, System.currentTimeMillis())));

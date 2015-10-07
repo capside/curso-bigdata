@@ -36,3 +36,12 @@ public class MailReducer extends Reducer<MailRelationship, LongWritable,  MailRe
     
     
 }
+
+
+
+
+
+
+
+
+
